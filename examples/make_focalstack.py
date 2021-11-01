@@ -5,6 +5,8 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 
+import sys
+sys.path.append("../")
 from fdimg import fft, edit, focalstack, filtering
 
 img = io.imread('./image/lenna.bmp')
@@ -23,7 +25,7 @@ layers_fft = fft.fft2(layers)
 
 
 fs_fft = focalstack.make_focalstack(
-    layers_fft, sigma, filter_func=filtering.gaussian_psf_meshgrid)
+    layers_fft, sigma, filter_func=filtering.cauthy_psf_meshgrid)
 
 fs_ifft = fft.ifft2(fs_fft)
 

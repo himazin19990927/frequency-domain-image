@@ -1,6 +1,8 @@
 from skimage import io
 from matplotlib import pyplot as plt
 
+import sys
+sys.path.append("../")
 from fdimg import fft, edit, filtering
 
 img = io.imread('./image/lenna.bmp')

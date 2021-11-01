@@ -3,6 +3,8 @@ from typing import Tuple
 from skimage import io
 from matplotlib import pyplot as plt
 
+import sys
+sys.path.append("../")
 from fdimg import fft, filtering, edit
 
 img = io.imread('./image/lenna.bmp')
